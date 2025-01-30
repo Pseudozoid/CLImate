@@ -1,0 +1,8 @@
+certifi==2024.12.14
+charset-normalizer==3.4.1
+idna==3.10
+pyfiglet==1.0.2
+requests==2.32.3
+simple_chalk==0.1.0
+soupsieve==2.6
+urllib3==2.3.0
