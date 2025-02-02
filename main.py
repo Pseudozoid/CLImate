@@ -3,8 +3,9 @@ import pyfiglet
 import sys
 import requests
 from simple_chalk import chalk
+from config import get_api_key
 
-API_KEY = 'your_api_key_here'
+API_KEY = get_api_key()
 BASE_URL = 'https://api.openweathermap.org/data/2.5/weather' 
 
 WEATHER_ICONS = {
