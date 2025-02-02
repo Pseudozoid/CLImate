@@ -3,6 +3,7 @@ import pyfiglet
 import sys
 import requests
 from simple_chalk import chalk
+from tabulate import tabulate
 from config import get_api_key
 
 API_KEY = get_api_key()
@@ -74,12 +75,16 @@ else:
 
     # output
     weather_icon = WEATHER_ICONS.get(icon, "")
-    output = f"{pyfiglet.figlet_format(city, font=args.font)}\n"
-    output += f"Country: {country}\n"
-    output += f"{weather_icon} {description}\n"
-    output += f"Temperature: {temperature}°C\n"
-    output += f"Feels like: {feels_like}°C\n"
-    output += f"Humidity: {humidity}\n"
+    output = f"{pyfiglet.figlet_format(city, font=args.font)}"
+    output += f"{weather_icon} {description}"
+    weather_data = [
+        ["Country", country],
+        ["Temperature", f"{temperature}°C"],
+        ["Feels like", f"{feels_like}°C"],
+        ["Humidity", humidity],
+    ]
 
     formatted_output = getattr(chalk, args.color)(output)
     print(formatted_output)
+    print(getattr(chalk, args.color)(tabulate(weather_data, tablefmt="grid")))
+
