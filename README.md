@@ -1,4 +1,6 @@
 # CLImate 🌦️ 
+<img src="https://i.imgur.com/Njop9FV.jpeg" alt="climate" align="centre">
+
 Pretty printed weather data for your terminal with customizable colours and fonts that I built while learning Python. Based on [this](https://github.com/BekBrace/weather-app-cli-python) project by [BekBrace](https://github.com/BekBrace) with added features and improvements.
 
 ## Requirements ⚙️
